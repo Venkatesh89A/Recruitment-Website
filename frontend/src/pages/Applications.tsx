@@ -1,9 +1,15 @@
+import ApplicationHeader from "../components/Applications/ApplicationHeader";
+import ApplicationFilters from "../components/Applications/ApplicationFilters";
+import ApplicationList from "../components/Applications/ApplicationList";
+
 const Applications = () => {
   return (
-    <div className="p-8">
-      <h1 className="text-4xl font-bold">
-        Applications
-      </h1>
+    <div className="space-y-6">
+      <ApplicationHeader />
+
+      <ApplicationFilters />
+
+      <ApplicationList />
     </div>
   );
 };

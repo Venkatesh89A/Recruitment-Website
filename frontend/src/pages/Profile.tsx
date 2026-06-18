@@ -1,13 +1,24 @@
+import ProfileHeader from "../components/profile/ProfileHeader";
+import PersonalInfo from "../components/profile/PersonalInfo";
+import Education from "../components/profile/Education";
+import Skills from "../components/profile/Skills";
+import ResumeSection from "../components/profile/ResumeSection";
+import SocialLinks from "../components/profile/SocialLinks";
+
 const Profile = () => {
   return (
-    <div className="bg-white rounded-xl shadow-md p-8">
-      <h1 className="text-3xl font-bold text-slate-800">
-        Profile
-      </h1>
+    <div className="space-y-6">
+      <ProfileHeader />
 
-      <p className="text-slate-500 mt-2">
-        Profile page is under development.
-      </p>
+      <PersonalInfo />
+
+      <Education />
+
+      <Skills />
+
+      <ResumeSection />
+
+      <SocialLinks />
     </div>
   );
 };

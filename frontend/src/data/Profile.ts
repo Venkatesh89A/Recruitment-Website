@@ -1,6 +1,7 @@
 export const profile = {
   name: "Amulya",
-  role: "Frontend Applicant",
-  email: "amulyathanda005@gmail.com.com",
-  phone: "+919346323028",
+  email: "amulya@email.com",
+  phone: "+91 XXXXX XXXXX",
+  location: "Hyderabad, Telangana",
+  dob: "12 October 2005",
 };

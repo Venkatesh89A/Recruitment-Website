@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ApplicantLayout from "./layouts/ApplicantLayout";
 
 import Dashboard from "./pages/Dashboard";
-import Profile from "./pages/Profile";
+import Profile from "./pages/profile";
 import Applications from "./pages/Applications";
 import Settings from "./pages/Settings";
 

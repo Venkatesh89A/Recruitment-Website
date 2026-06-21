@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root.dark {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: #f8fafc;
+  color: #0f172a;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+.dark body {
+  background: #08111f;
+  color: #e2e8f0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.18);
+  color: #0f172a;
+}
+
+.dark ::selection {
+  color: #f8fafc;
+}
+
+.auth-surface {
+  background-color: #f8fafc;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.13), transparent 30%),
+    radial-gradient(circle at 80% 0%, rgba(20, 184, 166, 0.10), transparent 26%),
+    linear-gradient(rgba(37, 99, 235, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.08) 1px, transparent 1px);
+  background-size: 42px 42px;
+  animation: authGradientShift 18s ease-in-out infinite alternate;
+}
+
+.dark .auth-surface {
+  background-color: #08111f;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.20), transparent 30%),
+    radial-gradient(circle at 82% 0%, rgba(14, 165, 233, 0.12), transparent 28%),
+    linear-gradient(rgba(96, 165, 250, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(96, 165, 250, 0.08) 1px, transparent 1px);
+}
+
+.btn-ripple {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.btn-ripple::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.22),
+    transparent
+  );
+  content: "";
+  opacity: 0;
+  transform: translateX(-120%);
+  transition:
+    opacity 220ms ease,
+    transform 620ms ease;
+}
+
+.btn-ripple:hover::before {
+  opacity: 1;
+  transform: translateX(120%);
+}
+
+.btn-ripple::after {
+  position: absolute;
+  left: var(--ripple-x, 50%);
+  top: var(--ripple-y, 50%);
+  z-index: -1;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.28);
+  content: "";
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  transition:
+    opacity 320ms ease,
+    transform 320ms ease;
+}
+
+.btn-ripple:active::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes authGradientShift {
+  from {
+    background-position:
+      0 0,
+      100% 0,
+      0 0,
+      0 0;
+  }
+
+  to {
+    background-position:
+      24px 18px,
+      calc(100% - 28px) 32px,
+      21px 21px,
+      21px 21px;
+  }
+}

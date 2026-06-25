@@ -26,13 +26,13 @@ class UserRelationship(models.Model):
     user = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
-        related_name='following'
+        related_name="following"
     )
 
     related_user = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
-        related_name='followers'
+        related_name="followers"
     )
 
     created_at = models.DateTimeField(auto_now_add=True)

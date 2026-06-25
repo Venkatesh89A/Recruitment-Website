@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" role="img" aria-labelledby="title">
+  <title id="title">PDF resume file</title>
+  <defs>
+    <linearGradient id="paper" x1="28" y1="8" x2="110" y2="134" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" />
+      <stop offset="1" stop-color="#e5e7eb" />
+    </linearGradient>
+  </defs>
+  <path d="M34 8h48l30 30v86a8 8 0 0 1-8 8H34a8 8 0 0 1-8-8V16a8 8 0 0 1 8-8Z" fill="url(#paper)" />
+  <path d="M82 8v30h30L82 8Z" fill="#cbd5e1" />
+  <rect x="18" y="66" width="80" height="34" rx="8" fill="#ef4444" />
+  <text x="58" y="89" fill="#fff" font-family="Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">PDF</text>
+  <path d="M43 111h50M43 121h38" stroke="#94a3b8" stroke-width="5" stroke-linecap="round" />
+</svg>

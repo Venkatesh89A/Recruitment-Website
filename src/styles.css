@@ -1,0 +1,194 @@
+:root {
+  --portal-bg: #f5f7fb;
+  --portal-ink: #172033;
+  --portal-muted: #667085;
+  --portal-primary: #1266f1;
+  --portal-accent: #10a37f;
+  --portal-warning: #f59e0b;
+  --portal-border: #e5e9f2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--portal-ink);
+  background: var(--portal-bg);
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.portal-navbar {
+  box-shadow: 0 8px 24px rgba(23, 32, 51, 0.05);
+}
+
+.portal-shell {
+  min-height: calc(100vh - 64px);
+}
+
+.listing-header,
+.details-header {
+  background:
+    linear-gradient(135deg, rgba(18, 102, 241, 0.09), rgba(16, 163, 127, 0.08)),
+    #ffffff;
+}
+
+.search-panel,
+.filter-panel,
+.details-card,
+.loading-state,
+.empty-state {
+  padding: 1.25rem;
+}
+
+.filter-panel {
+  position: sticky;
+  top: 88px;
+}
+
+.portal-stat {
+  min-width: 112px;
+  padding: 0.85rem 1rem;
+  background: #ffffff;
+  border: 1px solid var(--portal-border);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 24px rgba(23, 32, 51, 0.06);
+}
+
+.portal-stat strong,
+.portal-stat span {
+  display: block;
+}
+
+.portal-stat strong {
+  color: var(--portal-primary);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.portal-stat span {
+  color: var(--portal-muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-top: 0.35rem;
+  text-transform: uppercase;
+}
+
+.job-card {
+  border-radius: 0.5rem;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(23, 32, 51, 0.12) !important;
+}
+
+.job-meta {
+  color: var(--portal-muted);
+  font-size: 0.95rem;
+}
+
+.job-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.job-meta span::before {
+  width: 0.45rem;
+  height: 0.45rem;
+  content: "";
+  background: var(--portal-accent);
+  border-radius: 999px;
+  flex: 0 0 auto;
+}
+
+.loading-state,
+.empty-state {
+  min-height: 240px;
+  display: grid;
+  place-content: center;
+}
+
+.details-card {
+  border-color: var(--portal-border) !important;
+}
+
+.details-meta .badge {
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.65rem 0.8rem;
+}
+
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  padding: 0.45rem 0.85rem;
+  color: #0f5132;
+  background: #eaf7f1;
+  border: 1px solid #bce3d1;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.job-info-list > div {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--portal-border);
+}
+
+.job-info-list > div:first-child {
+  padding-top: 0;
+}
+
+.job-info-list > div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.job-info-list dt {
+  color: var(--portal-muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.job-info-list dd {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.page-link {
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 991.98px) {
+  .filter-panel {
+    position: static;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .search-panel,
+  .filter-panel,
+  .details-card,
+  .loading-state,
+  .empty-state {
+    padding: 1rem;
+  }
+
+  .display-6 {
+    font-size: 2rem;
+  }
+}

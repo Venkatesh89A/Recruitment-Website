@@ -1,0 +1,15 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.tabSize": 2,
+    "files.exclude": {
+      "node_modules": true,
+      "dist": true,
+      ".vite": true
+    }
+  }
+}
